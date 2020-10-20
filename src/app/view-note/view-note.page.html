@@ -8,10 +8,10 @@
   <ion-card color="secondary">
     <ion-card-header>
       <p>Created At</p>
-      <ion-card-subtitle>{{note.createdAt | date: 'short'}}</ion-card-subtitle>
+      <ion-card-subtitle>{{note.createdAt | date}}</ion-card-subtitle>
       <ion-card-title>{{note.title}}</ion-card-title>
     </ion-card-header>
-    <img src="{{note.downloadurl}}" alt="">
+    <img src="{{note.downloadurl}}" height="330px" alt="" style="object-fit: cover;">
     <ion-card-content>
       <p align="justify">{{note.content}}</p>
       <br>
@@ -21,3 +21,6 @@
 
   </ion-card>
 </ion-content>
+<!-- //git remote add origin https://github.com/Julius-Tabi/shopping.git
+git branch -M main
+git push -u origin main// -->

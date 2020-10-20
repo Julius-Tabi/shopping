@@ -29,3 +29,51 @@ ion-title{
 
   text-transform: uppercase;
 }
+
+img{
+  object-fit: cover;
+}
+
+//  ion-icon {
+//   width: 60px;
+//   height: 60px;
+//   justify-content: right;
+//   padding-right: -1%;
+// }
+
+.cart-icon {
+  font-size: 5px;
+  width: 30px;
+  height: 30px;
+}
+
+
+.cart-length {
+  color: var(--ion-color-primary);
+  position: absolute;
+  top: 0;
+  // margin-bottom: 100px;
+  // left: 10px;
+  font-weight: 900;
+  font-size: 1em;
+  
+  min-width: 25px;
+  z-index: 10;
+  justify-content: center;
+  text-align: center;
+}
+
+.ion-fab{
+  width: 10px;
+  height: 10px;
+  margin-right: 20px;
+  margin-top: 0;
+  margin-bottom: 50px;
+  justify-content: right;
+
+}
+.ion-fab-button #cart{
+margin-top: 0;
+margin-bottom: 300px;
+
+}
