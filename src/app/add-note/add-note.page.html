@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>New Item</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-list>
+  <ion-item>
+    <ion-input placeholder="Enter Item Title" [(ngModel)]="note.title"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-input id="Input" placeholder="Select Item Image" onfocus="this.value=''" type="file" accept="image/*" (change)="addPic($event)" value="Click here to clear" [(ngModel)]="downloadurl" name="picture" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-textarea rows="6" [(ngModel)]="note.content" placeholder="Enter more Item information here..."></ion-textarea>
+  </ion-item>
+</ion-list>
+  <ion-button color="primary" expand="full" (click)="addNote()" click="addPic()">Create</ion-button>
+</ion-content>
