@@ -1,37 +1,37 @@
-.title-block{
-  position: relative;
-  margin: 0;
-  padding: 0;
-  background-image: url("../../assets/img/bg2.jpeg");
-  height: 160px;
+.title-block {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    background-image: url("../../assets/img/bg2.jpeg");
+    height: 160px;
 }
 
-.title-block .heading{
-  font-size: 35px;
-  color: white;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-family: "Arial Black"
+.title-block .heading {
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Arial Black"
 }
 
-ion-label{
-
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: larger;
-}
-tool-bar{
-  background-color: transparent;
-}
-ion-title{
-
-  text-transform: uppercase;
+ion-label {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: larger;
 }
 
-img{
-  object-fit: cover;
+tool-bar {
+    background-color: transparent;
+}
+
+ion-title {
+    text-transform: uppercase;
+}
+
+img {
+    object-fit: cover;
 }
 
 //  ion-icon {
@@ -40,40 +40,36 @@ img{
 //   justify-content: right;
 //   padding-right: -1%;
 // }
-
 .cart-icon {
-  font-size: 5px;
-  width: 30px;
-  height: 30px;
+    font-size: 5px;
+    width: 35px;
+    height: 35px;
 }
-
 
 .cart-length {
-  color: var(--ion-color-primary);
-  position: absolute;
-  top: 0;
-  // margin-bottom: 100px;
-  // left: 10px;
-  font-weight: 900;
-  font-size: 1em;
-  
-  min-width: 25px;
-  z-index: 10;
-  justify-content: center;
-  text-align: center;
+    color: var(--ion-color-primary);
+    position: absolute;
+    top: 4.5px;
+    // margin-bottom: 100px;
+    // left: 1px;
+    font-weight: 900;
+    font-size: 1em;
+    min-width: 25px;
+    z-index: 10;
+    justify-content: center;
+    text-align: center;
 }
 
-.ion-fab{
-  width: 10px;
-  height: 10px;
-  margin-right: 20px;
-  margin-top: 0;
-  margin-bottom: 50px;
-  justify-content: right;
-
+.ion-fab {
+    width: 10px;
+    height: 10px;
+    margin-right: 20px;
+    margin-top: 0;
+    margin-bottom: 50px;
+    justify-content: right;
 }
-.ion-fab-button #cart{
-margin-top: 0;
-margin-bottom: 300px;
 
+.ion-fab-button #cart {
+    margin-top: 0;
+    margin-bottom: 300px;
 }

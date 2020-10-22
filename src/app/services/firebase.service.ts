@@ -16,7 +16,7 @@ export class FirebaseService {
 
   
   constructor(private afs: AngularFirestore) {
-    this.noteCollection = this.afs.collection<Note>('notes');
+    this.noteCollection = this.afs.collection<Note>('Items');
     this.notes = this.noteCollection.snapshotChanges().pipe(
         map(actions => {
           return actions.map(a => {
@@ -47,7 +47,7 @@ export class FirebaseService {
 
   addNote(note: Note): Promise<DocumentReference> {
     return this.noteCollection.add(note);
-   this.cartItemCount.next(this.cartItemCount.value + 1)
+   
   }
 
   updateNote(note: Note): Promise<void> {

@@ -10,7 +10,7 @@
             <ion-input placeholder="Enter Item Title" [(ngModel)]="note.title"></ion-input>
         </ion-item>
         <ion-item>
-            <ion-input id="Input" placeholder="Select Item Image" type="file" accept="image/*" (change)="upPic($event)" [(ngModel)]="note.downloadurl" name="picture" required></ion-input>
+            <ion-input id="Input" placeholder="Select Item Image" type="file" accept="image/*" (change)="upPic($event)" [(ngModel)]="note.downloadurl" required></ion-input>
         </ion-item>
         <ion-item>
             <ion-textarea rows="6" [(ngModel)]="note.content" placeholder="Enter more Item information here..."></ion-textarea>

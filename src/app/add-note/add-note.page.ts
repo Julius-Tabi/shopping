@@ -35,6 +35,7 @@ export class AddNotePage implements OnInit {
       this.router.navigateByUrl('/');
     }, err => {
     });
+    
   }
   
   // onFileSelected(event) {

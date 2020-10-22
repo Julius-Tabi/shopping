@@ -11,6 +11,7 @@
         </ion-item>
         <ion-item>
             <ion-input id="Input" placeholder="Select Item Image" onfocus="this.value=''" type="file" accept="image/*" (change)="addPic($event)" [(ngModel)]="note.downloadurl"></ion-input>
+            <!-- <ion-button type="button" (click)="">Pick Image</ion-button> -->
         </ion-item>
         <ion-item>
             <ion-textarea rows="6" [(ngModel)]="note.content" placeholder="Enter more Item information here..."></ion-textarea>

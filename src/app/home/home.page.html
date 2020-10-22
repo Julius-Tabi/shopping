@@ -1,46 +1,44 @@
 <ion-header>
-  <ion-toolbar style="background-color: transparent;">
-    <ion-title style="justify-content: center; text-transform: capitalize;">
-      My Shopping List
-    </ion-title>
-    <ion-fab vertical="top" horizontal="end">
-      <ion-fab-button #cart>
-          <div class="cart-length">
-              <div class="cart-length">{{ cartItemCount | async }}</div>
-          </div>
-          <ion-icon id="cart" name="cart" class="cart-icon"></ion-icon>
-      </ion-fab-button>
-  </ion-fab>
-  </ion-toolbar>
+    <ion-toolbar style="background-color: transparent;">
+        <ion-title style="justify-content: center; text-transform: capitalize;">
+            My Shopping List
+        </ion-title>
+        <ion-fab vertical="top" horizontal="end">
+            <ion-fab-button #cart style="width: 45px; height: 45px; margin-bottom: 100px;">
+                <div class="cart-length">
+                    <div class="cart-length">{{ cartItemCount | async }}</div>
+                </div>
+                <ion-icon id="cart" name="cart" class="cart-icon"></ion-icon>
+            </ion-fab-button>
+        </ion-fab>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <div class="title-block">
-    <div class="heading">My Items</div>
-  </div>
-  <ion-searchbar>
+    <div class="title-block">
+        <div class="heading">My Items</div>
+    </div>
+    <ion-searchbar>
 
-  </ion-searchbar>
-  <ion-list style="border-radius: 10%; background-color: rgba(134, 211, 241, 0.966); width: 100%;">
-    <ion-list-header>
-      <ion-label>Item</ion-label>
-    </ion-list-header>
-    <ion-item *ngFor="let note of (notes | async)">
-      <ion-thumbnail slot="start">
-        <img src="{{note.downloadurl}}" alt="">
-        
-        <!-- <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAAAAAAALAAAAAABAAEAAAICTAEAOw=="> -->
-      </ion-thumbnail>
-      <ion-label>
-        <h2>{{note.title}}</h2>
-        <p>{{note.content}}</p>
-      </ion-label>
-      <ion-button fill="outline" slot="end" [routerLink]="'/view-note/'+note.id">View</ion-button>
-    </ion-item>
-  </ion-list>
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button [routerLink]="'/add-note'">
-      <ion-icon name="add"></ion-icon>
-    </ion-fab-button>
-  </ion-fab>
+    </ion-searchbar>
+    <ion-list style="border-top-right-radius: 20%; background-image: linear-gradient(rgb(194, 140, 232),blue,rgb(75, 72, 255)); width: 100%; overflow-y: scroll;">
+        <ion-list-header>
+            <ion-label>Item</ion-label>
+        </ion-list-header>
+        <ion-item *ngFor="let note of (notes | async)">
+            <ion-thumbnail slot="start">
+                <img src="{{note.downloadurl}}" alt="" style="object-fit: cover;">
+            </ion-thumbnail>
+            <ion-label>
+                <h2>{{note.title}}</h2>
+                <p>{{note.content}}</p>
+            </ion-label>
+            <ion-button fill="outline" slot="end" [routerLink]="'/view-note/'+note.id">View</ion-button>
+        </ion-item>
+    </ion-list>
+    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+        <ion-fab-button [routerLink]="'/add-note'">
+            <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+    </ion-fab>
 </ion-content>
