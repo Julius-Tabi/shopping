@@ -38,4 +38,12 @@ export class UpdateNotePage implements OnInit, AfterViewInit {
     }, err => {
     });
   }
+   upPic(event: any) {
+    let reader = new FileReader();
+    reader.onload = (event: any) => {
+      this.note.downloadurl = event.target.result;
+    }
+    reader.readAsDataURL(event.target.files[0]);
+     this.fbService.updateNote(this.note);
+  }
 }

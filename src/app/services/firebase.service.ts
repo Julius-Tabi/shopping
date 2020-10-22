@@ -14,6 +14,7 @@ export class FirebaseService {
   private noteCollection: AngularFirestoreCollection<Note>;
   private cartItemCount = new BehaviorSubject(0);
 
+  
   constructor(private afs: AngularFirestore) {
     this.noteCollection = this.afs.collection<Note>('notes');
     this.notes = this.noteCollection.snapshotChanges().pipe(
@@ -50,7 +51,7 @@ export class FirebaseService {
   }
 
   updateNote(note: Note): Promise<void> {
-    return this.noteCollection.doc(note.id).update({ title: note.title, content: note.content, picture:note.downloadurl});
+    return this.noteCollection.doc(note.id).update({ title: note.title, content: note.content, downloadurl:note.downloadurl});
   }
 
   deleteNote(id: string): Promise<void> {

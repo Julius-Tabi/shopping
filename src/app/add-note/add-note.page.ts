@@ -18,7 +18,8 @@ export class AddNotePage implements OnInit {
     content: '',
     createdAt: new Date().getTime()
   };
-
+  selectedFile: File = null;
+  upLoadedFile: any;
   constructor(
       private activatedRoute: ActivatedRoute,
       private fbService: FirebaseService,
@@ -35,6 +36,20 @@ export class AddNotePage implements OnInit {
     }, err => {
     });
   }
+  
+  // onFileSelected(event) {
+  //   const file: File = event.target.files[0];
+  //   const reader = new FileReader();
+  //   reader.readAsDataURL(file);
+  //   reader.onloadstart = (p) => { console.log(p); };
+  //   reader.onloadend = (e) => {
+  //     console.log(e.target);
+  //     this.upLoadedFile = reader.result;
+  //     this.note.get('downloadurl').setValue(this.upLoadedFile);
+  //     // upLoadedFile: downloadurl;
+  //   };
+  // }
+
   addPic(event: any) {
     let reader = new FileReader();
     reader.onload = (event: any) => {
