@@ -3,7 +3,7 @@ import {FirebaseService} from '../services/firebase.service';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ToastController} from '@ionic/angular';
 import {Note} from '../modal/Note';
-import { url } from 'inspector';
+// import { url } from 'inspector';
 import { UrlResolver } from '@angular/compiler';
 
 @Component({
